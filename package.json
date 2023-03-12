@@ -1,0 +1,12 @@
+{
+  "name": "github-bot",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:aldairandre/github-bot.git",
+  "author": "aldairandre <aldairandre99@gmail.com>",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "octokit": "^2.0.14"
+  }
+}
