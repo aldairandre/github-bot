@@ -1,29 +1,21 @@
-import { Octokit } from "octokit";
+import octokit from "./octokit.js";
 
-const octokit = new Octokit({
-  auth : process.env.GH_TOKEN
-});
-
-
-
-const search = async (issuesURL) => {
+const search = async (url,owner,repo) => {
 
   try {
 
     const issues = []
 
-    const response = await octokit.request(
-      issuesURL,
+    const { data } = await octokit.request(
+      `GET ${url}`,
       {
-        owner : "florinpop17",
-        repo : "app-ideas",
+        owner : owner,
+        repo : repo,
         headers: {
           'X-GitHub-Api-Version': '2022-11-28'
         }
       }
     );
-    
-    const data = await response.data
     
     for (const key in data) {
       if (Object.hasOwnProperty.call(data, key)) {
