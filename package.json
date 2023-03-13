@@ -7,6 +7,7 @@
   "license": "MIT",
   "type": "module",
   "dependencies": {
+    "dotenv": "^16.0.3",
     "octokit": "^2.0.14"
   }
 }
