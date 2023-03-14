@@ -6,11 +6,17 @@
   "author": "aldairandre <aldairandre99@gmail.com>",
   "license": "MIT",
   "type": "module",
+  "scripts": {
+    "test": "jest"
+  },
   "dependencies": {
     "dotenv": "^16.0.3",
     "octokit": "^2.0.14"
   },
   "devDependencies": {
+    "@babel/core": "^7.21.0",
+    "@babel/preset-env": "^7.20.2",
+    "babel-jest": "^29.5.0",
     "jest": "^29.5.0"
   }
 }
