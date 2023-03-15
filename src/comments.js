@@ -1,5 +1,5 @@
-import search from "./searchIssueInRepo";
-import comment from "./commentIssue"
+import search from "./searchIssueInRepo.js";
+import comment from "./commentIssue.js"
 
 const commented = async (owner,repo,body) => {
   
