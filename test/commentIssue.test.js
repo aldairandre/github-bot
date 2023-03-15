@@ -1,7 +1,6 @@
 import { test, expect } from "vitest";
-import octokit from "./src/octokit";
-import comment from "./src/commentIssue";
-import search from "./src/searchIssueInRepo";
+import comment from "../src/commentIssue";
+import search from "../src/searchIssueInRepo";
 test('should a comment', async () => {
 
   const owner = "aldairandre"
@@ -9,7 +8,9 @@ test('should a comment', async () => {
   const body = "Bot commented"
 
   const issues = await search('aldairandre','github-bot')
-  const issue_number = issues[0].issue_number
+
+  const { issue_number } = issues[0]
+
   const url = `/repos/${owner}/${repo}/issues/${issue_number}/comments`
 
   const response = await comment(url,owner,repo,issue_number,body)
