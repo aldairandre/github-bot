@@ -30,22 +30,6 @@ const search = async (owner,repo) => {
     
     return response
 
-    /* const issues = response.map(issue => {
-      
-      if(!issue.pull_request){
-        return {
-          id : issue.id ,
-          issue_number : issue.number,
-          user : {
-            name : issue.user.login
-          }
-        }
-      }
-
-    })
-
-    return issues.filter(i => i) */
-
   } catch (error) {
 
     console.log(error);
