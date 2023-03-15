@@ -1,9 +1,7 @@
 import { test, expect } from "vitest";
-import octokit from "../octokit";
-import comment from "../commentIssue";
-import search from "../searchIssueInRepo";
-
-
+import octokit from "./src/octokit";
+import comment from "./src/commentIssue";
+import search from "./src/searchIssueInRepo";
 test('should a comment', async () => {
 
   const owner = "aldairandre"
