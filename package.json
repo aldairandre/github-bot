@@ -6,8 +6,15 @@
   "author": "aldairandre <aldairandre99@gmail.com>",
   "license": "MIT",
   "type": "module",
+  "scripts": {
+    "test": "vitest",
+    "coverage": "vitest run --coverage"
+  },
   "dependencies": {
     "dotenv": "^16.0.3",
     "octokit": "^2.0.14"
+  },
+  "devDependencies": {
+    "vitest": "^0.29.2"
   }
 }
