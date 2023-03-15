@@ -4,10 +4,10 @@ const comment = async (url,owner,repo,issue_number,body) => {
   
   try {
     
+    
     const response = await octokit.request(`POST ${url}`, {
       owner: owner,
       repo: repo,
-      per_page: 4,
       issue_number: issue_number,
       body: body,
       headers: {
@@ -15,7 +15,7 @@ const comment = async (url,owner,repo,issue_number,body) => {
       }
     })
 
-    return response
+    return response.status
 
   } catch (error) {
 
