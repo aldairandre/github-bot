@@ -1,4 +1,4 @@
-import search from "./src/searchIssueInRepo";
+import search from "../src/searchIssueInRepo";
 import { test,expect } from "vitest";
 test('should retrun an array with all issues', async () => {
 

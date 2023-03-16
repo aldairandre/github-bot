@@ -1,5 +1,5 @@
 import { test, expect } from "vitest";
-import comments from "./src/comments"
+import comments from "../src/comments"
 
 test('should comment in all issues', async () => {
 
