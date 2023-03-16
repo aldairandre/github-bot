@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "dotenv": "^16.0.3",
+    "enquirer": "^2.3.6",
     "octokit": "^2.0.14"
   },
   "devDependencies": {
