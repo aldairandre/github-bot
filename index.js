@@ -1,14 +1,16 @@
+import getInputs from "./src/input/index.js"
 import comments from "./src/comments.js"
-
-const owner = "aldairandre"
-const repo = "github-bot"
-const body = "Bot commented"
+import { exit } from "node:process"
 
 export default async function main() {
 
   try {
     
-    let response = await comments(owner,repo,body)
+    const inputs = await getInputs()
+
+    const { owner, repo, msg } = inputs
+
+    let response = await comments(owner,repo,msg)
     
     console.log("")
     console.log("=============================");
