@@ -16,11 +16,6 @@ const main = async () => {
         type : "input",
         name : "repo",
         message : "The repository name: "
-      },
-      {
-        type : "input",
-        name : "msg",
-        message : "The Message: "
       }
     ])
     
