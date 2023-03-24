@@ -5,9 +5,8 @@ test('should comment in all issues', async () => {
 
   const owner = "aldairandre"
   const repo = "github-bot"
-  const body = "Bot commented"
 
-  const response = await comments(owner,repo,body)
+  const response = await comments(owner,repo)
   
   expect(response).toBe(201)
 

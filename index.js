@@ -8,16 +8,9 @@ export default async function main() {
     
     const inputs = await getInputs()
 
-    const { owner, repo, msg } = inputs
+    const { owner, repo } = inputs
 
-    let response = await comments(owner,repo,msg)
-    
-    console.log("")
-    console.log("=============================");
-    console.log("")
-    console.log("I already did my chores.")
-    console.log("")
-    console.log("=============================")
+    let response = await comments(owner,repo)
 
     return response
 
@@ -26,4 +19,4 @@ export default async function main() {
   }
 }
 
-main()
+await main()
