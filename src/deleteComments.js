@@ -1,5 +1,9 @@
 import octokit from './octokit.js'
 import search from "./searchIssueInRepo.js";
+import  input from './input/index.js'
+
+const inputs = await input()
+const {owner, repo} = inputs
 
 const deleteComments = async (owner,repo) => {
 
@@ -38,12 +42,22 @@ const deleteComments = async (owner,repo) => {
     
     });
 
-    return 'Done'
+    console.log("")
+    console.log("=============================");
+    console.log("")
+    console.log("I already did my chores.")
+    console.log("")
+    console.log("=============================")
+    console.log("")
+
+    return 200
 
   } catch (error) {
     console.log(error)
   }
 
 }
+
+deleteComments(owner,repo)
 
 export default deleteComments;
