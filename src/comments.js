@@ -1,6 +1,7 @@
 import { readFile } from 'node:fs';
 import search from "./searchIssueInRepo.js";
 import comment from "./commentIssue.js"
+import validator from './checkIfComment.js';
 
 const commented = async (owner,repo) => {
 
@@ -19,8 +20,14 @@ const commented = async (owner,repo) => {
           const { issue_number } = issues[issue];
         
           const url = `/repos/${owner}/${repo}/issues/${issue_number}/comments`
-        
-          await comment(url,owner,repo,issue_number,message.toString("utf-8"))
+
+          if (await validator(owner,repo,issue_number)) {
+            
+            await comment(url,owner,repo,issue_number,message.toString("utf-8"))
+
+          }else {
+            console.log(`You already commented in issue ${issue_number}`)
+          }
            
         }
       }
