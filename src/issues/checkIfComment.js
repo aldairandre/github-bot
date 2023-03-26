@@ -1,4 +1,4 @@
-import octokit from './octokit.js'
+import octokit from '../octokit.js'
 
 const validator = async (owner,repo,issue_number) => {
   

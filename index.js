@@ -1,6 +1,5 @@
 import getInputs from "./src/input/index.js"
-import comments from "./src/comments.js"
-import { exit } from "node:process"
+import comments from "./src/issues/comments.js"
 
 export default async function main() {
 

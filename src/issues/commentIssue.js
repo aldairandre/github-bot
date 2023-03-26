@@ -1,4 +1,4 @@
-import octokit from "./octokit.js"
+import octokit from "../octokit.js"
 
 const comment = async (owner,repo,issue_number,body) => {
   

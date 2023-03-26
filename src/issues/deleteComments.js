@@ -1,6 +1,6 @@
-import octokit from './octokit.js'
+import octokit from '../octokit.js'
 import search from "./searchIssueInRepo.js";
-import  input from './input/index.js'
+import  input from '../input/index.js'
 
 const inputs = await input()
 const {owner, repo} = inputs
