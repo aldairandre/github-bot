@@ -1,7 +1,7 @@
 import { test, expect } from "vitest";
 import { readFile } from 'node:fs'
-import comment from "../src/commentIssue";
-import search from "../src/searchIssueInRepo";
+import comment from "../src/issues/commentIssue";
+import search from "../src/issues/searchIssueInRepo";
 test('should a comment', async () => {
 
   const owner = "aldairandre"
