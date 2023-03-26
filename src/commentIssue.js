@@ -1,19 +1,18 @@
 import octokit from "./octokit.js"
 
-const comment = async (url,owner,repo,issue_number,body) => {
+const comment = async (owner,repo,issue_number,body) => {
   
   try {
     
     
-    const response = await octokit.request(`POST ${url}`, {
-      owner: owner,
-      repo: repo,
-      issue_number: issue_number,
-      body: body,
-      headers: {
-        'X-GitHub-Api-Version': '2022-11-28'
+    const response = await octokit.rest.issues.createComment(
+      {
+        owner,
+        repo,
+        issue_number,
+        body,
       }
-    })
+    )
 
     return response.status
 
@@ -24,5 +23,7 @@ const comment = async (url,owner,repo,issue_number,body) => {
   }
 
 }
+
+//console.log(await comment('aldairandre','github-bot',18,'teste'))
 
 export default comment;
