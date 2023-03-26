@@ -21,7 +21,7 @@ const validator = async (owner,repo,issue_number) => {
           return false
         }
       } 
-
+      return true
     }
 
   } catch (error) {
